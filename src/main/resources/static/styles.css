@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2em;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+input, textarea, button {
+  margin-bottom: 1em;
+  padding: 0.5em;
+}

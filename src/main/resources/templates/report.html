@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h2>Top 5 Most Frequent Words</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Word</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr th:each="word : ${topWords}">
+                <td th:text="${word}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        form { display: flex; flex-direction: column; max-width: 300px; margin: auto; }
+        input, textarea { margin-bottom: 1em; padding: 0.5em; }
+        button { padding: 0.5em; }
+    </style>
+</head>
+<body>
+    <h2>Create New Blog</h2>
+    <form action="/blogs/create" method="post">
+        <input type="text" name="name" placeholder="Blog Name" required>
+        <textarea name="body" placeholder="Blog Body" required></textarea>
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

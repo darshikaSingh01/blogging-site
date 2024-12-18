@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        ul { list-style-type: none; padding: 0; }
+        li { border-bottom: 1px solid #ddd; margin-bottom: 1em; }
+        .actions { margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <a href="/blogs/create">Create New Blog</a>
+    <ul>
+        <li th:each="blog : ${blogs}">
+            <h3 th:text="${blog.name}"></h3>
+            <p th:text="${blog.body}"></p>
+            <form action="/blogs/delete/{blog.id}" method="post">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    </ul>
+    <a href="/blogs/report">View Report</a>
+
+</body>
+</html>
